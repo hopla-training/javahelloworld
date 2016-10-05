@@ -18,17 +18,18 @@ ENTRYPOINT ["java", "HelloWorld"]
 
 
 
+docker build -t javahelloworld -f Dockerfile.javahelloworld .
 
 docker run --rm javahelloworld
 
 docker run --rm javahelloworld-alpine
 
-
-docker build -t javahelloworld -f Dockerfile.javahelloworld .
-
 docker build -t javahelloworld-alpine -f Dockerfile.javahelloworld-alpine .
 
+
+
 docker run -ti --rm -v $(pwd)/HelloWorld.java:/HelloWorld.java -v $(pwd)/tmp:/tmp jdk7 javac /HelloWorld.java -d /tmp
+
 
 
 docker images|grep javahelloworld
