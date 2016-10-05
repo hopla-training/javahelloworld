@@ -34,5 +34,6 @@ docker run -ti --rm -v $(pwd)/HelloWorld.java:/HelloWorld.java -v $(pwd)/tmp:/tm
 docker images|grep javahelloworld
 
 javahelloworld             latest              10f25bff5fb9        6 minutes ago       584.6 MB
+
 javahelloworld-alpine      latest              786b879771a8        6 minutes ago       143.7 MB
 
